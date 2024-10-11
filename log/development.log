@@ -3083,3 +3083,1256 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 6416)
 
 
+Started GET "/" for 223.39.195.141 at 2024-10-04 05:43:12 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 1250)
+
+
+Started GET "/" for 223.39.195.141 at 2024-10-04 05:43:13 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 316)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2024-10-04 05:43:13 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 7.2ms | Allocations: 8475)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-04 05:43:13 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4596)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 5.0ms | Allocations: 16038)
+
+
+Started GET "/articles/7" for 172.17.0.1 at 2024-10-04 05:43:15 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 4.8ms | Allocations: 1364)
+  Rendered articles/show.html.erb within layouts/application (Duration: 19.6ms | Allocations: 3314)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 19.1ms | ActiveRecord: 6.2ms | Allocations: 13872)
+
+
+Started POST "/articles/7/comments" for 172.17.0.1 at 2024-10-04 05:43:18 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"xIKN09lWE8l37MTJRke/S9+yHFzCwxwcz/20e13/VWvinCoDnqdrEEQKZc+fOxamoE+Zv7La6WH8wwJF3rbY1w==", "comment"=>{"comment"=>"affafsafasfaffs", "article_id"=>"7"}, "commit"=>"Create Comment", "article_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mComment Create (5.0ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "article_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "affafsafasfaffs"], ["article_id", 7], ["created_at", "2024-10-04 05:43:18.634545"], ["updated_at", "2024-10-04 05:43:18.634545"]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/7
+Completed 302 Found in 20ms (ActiveRecord: 8.8ms | Allocations: 7773)
+
+
+Started GET "/articles/7" for 172.17.0.1 at 2024-10-04 05:43:18 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 7]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.8ms | Allocations: 573)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2074)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 8364)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8575728061014197160)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20241011085051)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241011085051"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20241011085209)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "content" text, "rating" integer, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_bedd9094d4"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_product_id" ON "reviews"  ("product_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20241011085209"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8575728061014197160)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 113.198.229.78 at 2024-10-11 10:47:34 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 1256)
+
+
+Started GET "/" for 113.198.229.78 at 2024-10-11 10:47:34 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 312)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2024-10-11 10:47:35 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 8.2ms | Allocations: 8456)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-11 10:47:35 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4596)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 64.2ms | ActiveRecord: 4.3ms | Allocations: 35722)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-11 10:48:28 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 5.6ms | ActiveRecord: 4.4ms | Allocations: 14773)
+
+
+Started GET "/products/new" for 172.17.0.1 at 2024-10-11 10:48:30 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.7ms | Allocations: 2015)
+  Rendered products/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2371)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 11898)
+
+
+Started POST "/products" for 172.17.0.1 at 2024-10-11 10:49:04 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"vmwPmGXVFJuBUXzBDncNaZ0ueF3L/QXhiP0nfKZF0CVXfyrnxGnMHZKOzmMFHNaJadMgArDFaOoqxumP+w5+Jg==", "product"=>{"name"=>"도라에몽 피규어", "description"=>"일본 만화 도라에몽 피규어", "price"=>"30000"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "도라에몽 피규어"], ["description", "일본 만화 도라에몽 피규어"], ["price", 30000], ["created_at", "2024-10-11 10:49:04.354227"], ["updated_at", "2024-10-11 10:49:04.354227"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/1
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms | Allocations: 4752)
+
+
+Started GET "/products/1" for 172.17.0.1 at 2024-10-11 10:49:04 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 4031)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:13:in `show'
+Started GET "/products/1" for 172.17.0.1 at 2024-10-11 10:49:52 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 478.5ms | Allocations: 163833)
+  Rendered products/show.html.erb within layouts/application (Duration: 481.4ms | Allocations: 165734)
+Completed 500 Internal Server Error in 515ms (ActiveRecord: 14.1ms | Allocations: 184173)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review' for #<#<Class:0x0000556403fb41d8>:0x00005564043ebad0>
+Did you mean?  @review
+               @reviews):
+    1: <%= form_with(model: [ @product, review], local: true) do |form| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= form.label :content %>
+  
+app/views/reviews/_form.html.erb:1
+app/views/products/show.html.erb:25
+Started POST "/products" for 172.17.0.1 at 2024-10-11 10:49:59 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"vmwPmGXVFJuBUXzBDncNaZ0ueF3L/QXhiP0nfKZF0CVXfyrnxGnMHZKOzmMFHNaJadMgArDFaOoqxumP+w5+Jg==", "product"=>{"name"=>"도라에몽 피규어", "description"=>"일본 만화 도라에몽 피규어", "price"=>"30000"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "도라에몽 피규어"], ["description", "일본 만화 도라에몽 피규어"], ["price", 30000], ["created_at", "2024-10-11 10:49:59.939958"], ["updated_at", "2024-10-11 10:49:59.939958"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/2
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms | Allocations: 4700)
+
+
+Started GET "/products/2" for 172.17.0.1 at 2024-10-11 10:50:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 302.0ms | Allocations: 163635)
+  Rendered products/show.html.erb within layouts/application (Duration: 303.6ms | Allocations: 165075)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.8ms | Allocations: 167814)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review' for #<#<Class:0x0000556403fb41d8>:0x00005564060d2c70>
+Did you mean?  @review
+               @reviews):
+    1: <%= form_with(model: [ @product, review], local: true) do |form| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= form.label :content %>
+  
+app/views/reviews/_form.html.erb:1
+app/views/products/show.html.erb:25
+Started GET "/" for 172.17.0.1 at 2024-10-11 10:52:09 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (46.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 15.7ms | ActiveRecord: 51.3ms | Allocations: 16923)
+
+
+Started GET "/articles/new" for 172.17.0.1 at 2024-10-11 10:52:11 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.3ms | Allocations: 1119)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1467)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 7364)
+
+
+Started POST "/articles" for 172.17.0.1 at 2024-10-11 10:52:13 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"v82W0YTLW4WLPYvm4sMIZAktNFaRDFk0sebfK6GB062nqXLaZ6aS9VkpVWCwDllXZlvupZvHIxgPTeDsefFVjA==", "article"=>{"title"=>"ㅇㅁㅇ", "content"=>"ㅁㅇㅁㅇ"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:32:in `block in create'
+  [1m[36mArticle Create (1.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "ㅇㅁㅇ"], ["content", "ㅁㅇㅁㅇ"], ["created_at", "2024-10-11 10:52:13.394005"], ["updated_at", "2024-10-11 10:52:13.394005"]]
+  ↳ app/controllers/articles_controller.rb:32:in `block in create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/8
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms | Allocations: 4542)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:13 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 1.9ms | Allocations: 927)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 6.6ms | ActiveRecord: 4.1ms | Allocations: 13233)
+
+
+Started POST "/articles/8/comments" for 172.17.0.1 at 2024-10-11 10:52:15 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"pxc9cKfS18ZXT1zZ9qHOv2Bcf1r3g70oXWAaQACu4BPG3H/lcMdEwheEHlivX5JJg2QhmS0PWLBUimqsEWo0RA==", "comment"=>{"comment"=>"ㅁㄴㄹㅁㄴㄹㅁ", "article_id"=>"8"}, "commit"=>"Create Comment", "article_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mComment Create (1.5ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "article_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "ㅁㄴㄹㅁㄴㄹㅁ"], ["article_id", 8], ["created_at", "2024-10-11 10:52:15.733643"], ["updated_at", "2024-10-11 10:52:15.733643"]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/8
+Completed 302 Found in 16ms (ActiveRecord: 4.9ms | Allocations: 7583)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:15 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.8ms | Allocations: 573)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2068)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 1.0ms | Allocations: 8475)
+
+
+Started POST "/articles/8/comments" for 172.17.0.1 at 2024-10-11 10:52:18 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"dyaL4unpqeCp+Yh9CgaEwE2TGjQHHiGUW4dG7WHH5i4W7cl3Pvw65OkyyvxT+Ng2rqtE992SxAxSbTYBcAMyeQ==", "comment"=>{"comment"=>"ㅁㄹㅁㄴㄹㅁㄴㄹ", "article_id"=>"8"}, "commit"=>"Create Comment", "article_id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "article_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["comment", "ㅁㄹㅁㄴㄹㅁㄴㄹ"], ["article_id", 8], ["created_at", "2024-10-11 10:52:18.472386"], ["updated_at", "2024-10-11 10:52:18.472386"]]
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/8
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms | Allocations: 5655)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:18 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.7ms | Allocations: 573)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.8ms | Allocations: 8474)
+
+
+Started GET "/articles" for 172.17.0.1 at 2024-10-11 10:52:20 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 6686)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:21 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.7ms | Allocations: 573)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 8491)
+
+
+Started GET "/articles" for 172.17.0.1 at 2024-10-11 10:52:22 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 6687)
+
+
+Started GET "/articles" for 172.17.0.1 at 2024-10-11 10:52:34 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 6.4ms | ActiveRecord: 49.5ms | Allocations: 17016)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:37 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.9ms | Allocations: 627)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 2.8ms | Allocations: 12302)
+
+
+Started GET "/articles" for 172.17.0.1 at 2024-10-11 10:52:39 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 6691)
+
+
+Started GET "/articles" for 172.17.0.1 at 2024-10-11 10:52:44 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 57.9ms | Allocations: 4234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 58.8ms | ActiveRecord: 4.9ms | Allocations: 16928)
+
+
+Started GET "/articles/8" for 172.17.0.1 at 2024-10-11 10:52:45 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:13
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = $1[0m  [["article_id", 8]]
+  ↳ app/views/articles/show.html.erb:15
+  Rendered comments/_form.html.erb (Duration: 0.9ms | Allocations: 627)
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 15.2ms | ActiveRecord: 2.8ms | Allocations: 12296)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-11 10:53:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4905)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 7.8ms | ActiveRecord: 5.1ms | Allocations: 17680)
+
+
+Started DELETE "/products/2" for 172.17.0.1 at 2024-10-11 10:53:06 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DcGfqw1pwXJwg27JYuLIY/32CFAltqqebFSFd4LU0XdsCt0+2nxSdjBILEg7HJSVHs5Wk/86TwZlvvWbkxAFIA==", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products
+Completed 302 Found in 15ms (ActiveRecord: 5.2ms | Allocations: 8017)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 10:53:06 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 816)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 6585)
+
+
+Started DELETE "/products/1" for 172.17.0.1 at 2024-10-11 10:53:07 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8zzOMiKy0I3oWk5ub3DG+edU03GT+L8hijn6t68Sxv6S94yn9adDiaiRDO82jpoPBGyNskl0WrmD04pbvtYSqQ==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms | Allocations: 5594)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 10:53:08 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 6454)
+
+
+Started GET "/products/new" for 172.17.0.1 at 2024-10-11 10:53:10 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.0ms | Allocations: 904)
+  Rendered products/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 6763)
+
+
+Started POST "/products" for 172.17.0.1 at 2024-10-11 10:53:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"ba9UjVgIbYI5JyxGLjkA6YjjE6KvFl7mffuMZDui8R2EvHHy+bS1BCr4nuQlUtsJfB5L/dQuM+3fwEKXZulfHg==", "product"=>{"name"=>"ㅁㅇㅁ", "description"=>"ㄹㄴㄹㅁ", "price"=>"12314"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ㅁㅇㅁ"], ["description", "ㄹㄴㄹㅁ"], ["price", 12314], ["created_at", "2024-10-11 10:53:13.773870"], ["updated_at", "2024-10-11 10:53:13.773870"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/3
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms | Allocations: 4567)
+
+
+Started GET "/products/3" for 172.17.0.1 at 2024-10-11 10:53:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 346.0ms | Allocations: 163650)
+  Rendered products/show.html.erb within layouts/application (Duration: 347.7ms | Allocations: 165087)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 2.2ms | Allocations: 171374)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review' for #<#<Class:0x00007f7b44524ec0>:0x00005564048b9468>
+Did you mean?  @review
+               @reviews):
+    1: <%= form_with(model: [ @product, review], local: true) do |form| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= form.label :content %>
+  
+app/views/reviews/_form.html.erb:1
+app/views/products/show.html.erb:25
+Started GET "/products" for 172.17.0.1 at 2024-10-11 10:53:19 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 6604)
+
+
+Started GET "/products/3" for 172.17.0.1 at 2024-10-11 10:53:20 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 336.9ms | Allocations: 163574)
+  Rendered products/show.html.erb within layouts/application (Duration: 338.6ms | Allocations: 165010)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 0.7ms | Allocations: 167737)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review' for #<#<Class:0x00007f7b44524ec0>:0x00007f7b458e2c78>
+Did you mean?  @review
+               @reviews):
+    1: <%= form_with(model: [ @product, review], local: true) do |form| %>
+    2: 
+    3:   <div class="field">
+    4:     <%= form.label :content %>
+  
+app/views/reviews/_form.html.erb:1
+app/views/products/show.html.erb:25
+Started GET "/products" for 172.17.0.1 at 2024-10-11 10:57:21 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 7870)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 10:57:22 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms | Allocations: 6585)
+
+
+Started GET "/products/new" for 172.17.0.1 at 2024-10-11 10:57:25 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.3ms | Allocations: 1248)
+  Rendered products/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1594)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 7490)
+
+
+Started POST "/products" for 172.17.0.1 at 2024-10-11 10:57:28 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"LdD7WW/n15O2x40K/2x6I72/qWwACtwIchysVTcSqnHEw94mzlsPFaUYP6j0B6HDSULxM3sysQPQJ2KmalkEcg==", "product"=>{"name"=>"ㅁㄹㄴㅁ", "description"=>"ㅁㄴㄹㅁㄴㄹㅁㄴㄹ", "price"=>"1234124"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ㅁㄹㄴㅁ"], ["description", "ㅁㄴㄹㅁㄴㄹㅁㄴㄹ"], ["price", 1234124], ["created_at", "2024-10-11 10:57:28.529332"], ["updated_at", "2024-10-11 10:57:28.529332"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/4
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms | Allocations: 4468)
+
+
+Started GET "/products/4" for 172.17.0.1 at 2024-10-11 10:57:28 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 1.3ms | Allocations: 1111)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.7ms | Allocations: 9576)
+
+
+Started POST "/products/4/reviews" for 172.17.0.1 at 2024-10-11 10:57:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"T640fVMiwvpxkW1SacUjSqW/bo1i1pXTsuihYw2cftsuZXbohDdR/jFaL9MwO3+8RocwTrhacEu7AtGPHFiqjA==", "review"=>{"content"=>"ㅎㅇ", "rating"=>"5", "product_id"=>"4"}, "commit"=>"Create Review", "product_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅎㅇ"], ["rating", 5], ["product_id", 4], ["created_at", "2024-10-11 10:57:39.288250"], ["updated_at", "2024-10-11 10:57:39.288250"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to 
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 4.0ms | Allocations: 114689)
+
+
+  
+NoMethodError (undefined method `review_url' for #<ReviewsController:0x00007f7b452782e8>):
+  
+app/controllers/reviews_controller.rb:31:in `block (2 levels) in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/products/4/reviews" for 172.17.0.1 at 2024-10-11 11:00:57 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"T640fVMiwvpxkW1SacUjSqW/bo1i1pXTsuihYw2cftsuZXbohDdR/jFaL9MwO3+8RocwTrhacEu7AtGPHFiqjA==", "review"=>{"content"=>"ㅎㅇ", "rating"=>"5", "product_id"=>"4"}, "commit"=>"Create Review", "product_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅎㅇ"], ["rating", 5], ["product_id", 4], ["created_at", "2024-10-11 11:00:57.326576"], ["updated_at", "2024-10-11 11:00:57.326576"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/4
+Completed 302 Found in 67ms (ActiveRecord: 9.3ms | Allocations: 21516)
+
+
+Started GET "/articles/4" for 172.17.0.1 at 2024-10-11 11:00:57 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.3ms | Allocations: 4018)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=4):
+  
+app/controllers/articles_controller.rb:69:in `set_article'
+Started GET "/" for 113.198.229.78 at 2024-10-11 11:02:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 1256)
+
+
+Started GET "/" for 113.198.229.78 at 2024-10-11 11:02:39 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 316)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2024-10-11 11:02:39 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms | Allocations: 8440)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-11 11:02:39 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 2.7ms | Allocations: 17788)
+
+
+Started DELETE "/products/3" for 172.17.0.1 at 2024-10-11 11:02:44 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4gPT2EbKqzgHOgBPnmfVFMLrDEQNGvvsCkh/tknD9OuDyJFNkd84PEfxQs7HmYniIdNSh9eWHnQDog9aWAcgvA==", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products
+Completed 302 Found in 23ms (ActiveRecord: 5.4ms | Allocations: 9199)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 11:02:44 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 826)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 6622)
+
+
+Started DELETE "/products/4" for 172.17.0.1 at 2024-10-11 11:02:46 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rwHU2s1YAC3HzaKQANmlitxGhqSvTKy74x4yboteVITOypZPGk2TKYcG4BFZJ/l8P37YZ3XASSPq9EKCmpqA0w==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products
+Completed 302 Found in 21ms (ActiveRecord: 6.2ms | Allocations: 12100)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 11:02:46 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 686)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 6452)
+
+
+Started GET "/products/new" for 172.17.0.1 at 2024-10-11 11:02:47 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.5ms | Allocations: 1960)
+  Rendered products/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 8250)
+
+
+Started POST "/products" for 172.17.0.1 at 2024-10-11 11:02:50 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"KL9MY2+R+xvtW2SlQUWaBHRAIqQn0GxmEy+Hs2ldNz7BrGkczi0jnf6E1gdKLkHkgL16+1zoAW2xFElANBaZPQ==", "product"=>{"name"=>"ㅁㄴㄹ", "description"=>"ㅁㄹㅁ", "price"=>"1234"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ㅁㄴㄹ"], ["description", "ㅁㄹㅁ"], ["price", 1234], ["created_at", "2024-10-11 11:02:50.678679"], ["updated_at", "2024-10-11 11:02:50.678679"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/5
+Completed 302 Found in 21ms (ActiveRecord: 3.7ms | Allocations: 4755)
+
+
+Started GET "/products/5" for 172.17.0.1 at 2024-10-11 11:02:50 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 1.7ms | Allocations: 1182)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 9704)
+
+
+Started POST "/products/5/reviews" for 172.17.0.1 at 2024-10-11 11:02:53 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"aWpwOL+e/JNfGGz0piwJGS4uQyjZWJ8sX++xeKv3ML0IoTKtaItvlx/TLnX/0lXvzRYd6wPUerRWBcGUujPk6g==", "review"=>{"content"=>"44", "rating"=>"4", "product_id"=>"5"}, "commit"=>"Create Review", "product_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "44"], ["rating", 4], ["product_id", 5], ["created_at", "2024-10-11 11:02:53.400249"], ["updated_at", "2024-10-11 11:02:53.400249"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/5
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms | Allocations: 5963)
+
+
+Started GET "/articles/5" for 172.17.0.1 at 2024-10-11 11:02:53 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.6ms | Allocations: 4084)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=5):
+  
+app/controllers/articles_controller.rb:69:in `set_article'
+Started POST "/products/5/reviews" for 172.17.0.1 at 2024-10-11 11:05:11 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"aWpwOL+e/JNfGGz0piwJGS4uQyjZWJ8sX++xeKv3ML0IoTKtaItvlx/TLnX/0lXvzRYd6wPUerRWBcGUujPk6g==", "review"=>{"content"=>"44", "rating"=>"4", "product_id"=>"5"}, "commit"=>"Create Review", "product_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "44"], ["rating", 4], ["product_id", 5], ["created_at", "2024-10-11 11:05:11.325773"], ["updated_at", "2024-10-11 11:05:11.325773"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/5
+Completed 302 Found in 10ms (ActiveRecord: 4.5ms | Allocations: 5771)
+
+
+Started GET "/articles/5" for 172.17.0.1 at 2024-10-11 11:05:11 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 2802)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=5):
+  
+app/controllers/articles_controller.rb:69:in `set_article'
+Started GET "/" for 113.198.229.78 at 2024-10-11 11:07:24 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 1260)
+
+
+Started GET "/" for 113.198.229.78 at 2024-10-11 11:07:25 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2024-10-11 11:07:25 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms | Allocations: 8477)
+
+
+Started GET "/" for 172.17.0.1 at 2024-10-11 11:07:25 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5336)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 2.7ms | Allocations: 17682)
+
+
+Started DELETE "/products/5" for 172.17.0.1 at 2024-10-11 11:07:28 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/SyLp3GaOY2YvgOKnqIrw8HD/v2ykZBNH4FrfI/0gzCc58kypo+qidh1QQvHXHc1IvugPmgdddUWaxuQnjBXZw==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mReview Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products
+Completed 302 Found in 30ms (ActiveRecord: 7.5ms | Allocations: 15589)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 11:07:28 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 6464)
+
+
+Started GET "/products/new" for 172.17.0.1 at 2024-10-11 11:07:29 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.1ms | Allocations: 1960)
+  Rendered products/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.3ms | Allocations: 8248)
+
+
+Started POST "/products" for 172.17.0.1 at 2024-10-11 11:07:37 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"jpOOME0wvYGc3IYZLpGho0b4v0dO2RtazL/XailgyzJngKtP7IxlB48DNLsl+npDsgXnGDXhdlFuhBmZdCtlMQ==", "product"=>{"name"=>"도라에몽", "description"=>"도라에몽피규어", "price"=>"40000"}, "commit"=>"Create Product"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "도라에몽"], ["description", "도라에몽피규어"], ["price", 40000], ["created_at", "2024-10-11 11:07:37.199382"], ["updated_at", "2024-10-11 11:07:37.199382"]]
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:32:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/6
+Completed 302 Found in 13ms (ActiveRecord: 3.6ms | Allocations: 4741)
+
+
+Started GET "/products/6" for 172.17.0.1 at 2024-10-11 11:07:37 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 2.6ms | Allocations: 1181)
+  Rendered products/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.8ms | Allocations: 9694)
+
+
+Started POST "/products/6/reviews" for 172.17.0.1 at 2024-10-11 11:07:41 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"VY7YW6lGRVLDGRAD7o9KiYnbvZg54DRdIEixfPJv9oQ0RZrOflPWVoPSUoK3cRZ/auPjW+Ns0cUposGQ46si0w==", "review"=>{"content"=>"ㅁㄴㅇ", "rating"=>"5", "product_id"=>"6"}, "commit"=>"Create Review", "product_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅁㄴㅇ"], ["rating", 5], ["product_id", 6], ["created_at", "2024-10-11 11:07:41.157224"], ["updated_at", "2024-10-11 11:07:41.157224"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/articles/6
+Completed 302 Found in 19ms (ActiveRecord: 4.3ms | Allocations: 5968)
+
+
+Started GET "/articles/6" for 172.17.0.1 at 2024-10-11 11:07:41 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:69:in `set_article'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.5ms | Allocations: 4082)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=6):
+  
+app/controllers/articles_controller.rb:69:in `set_article'
+Started POST "/products/6/reviews" for 172.17.0.1 at 2024-10-11 11:09:11 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"VY7YW6lGRVLDGRAD7o9KiYnbvZg54DRdIEixfPJv9oQ0RZrOflPWVoPSUoK3cRZ/auPjW+Ns0cUposGQ46si0w==", "review"=>{"content"=>"ㅁㄴㅇ", "rating"=>"5", "product_id"=>"6"}, "commit"=>"Create Review", "product_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅁㄴㅇ"], ["rating", 5], ["product_id", 6], ["created_at", "2024-10-11 11:09:11.642141"], ["updated_at", "2024-10-11 11:09:11.642141"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 11.5ms | Allocations: 79364)
+
+
+  
+NoMethodError (undefined method `article_path' for #<ReviewsController:0x0000562d38533de0>):
+  
+app/controllers/reviews_controller.rb:31:in `block (2 levels) in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/products/6/reviews" for 172.17.0.1 at 2024-10-11 11:09:18 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"VY7YW6lGRVLDGRAD7o9KiYnbvZg54DRdIEixfPJv9oQ0RZrOflPWVoPSUoK3cRZ/auPjW+Ns0cUposGQ46si0w==", "review"=>{"content"=>"ㅁㄴㅇ", "rating"=>"5", "product_id"=>"6"}, "commit"=>"Create Review", "product_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅁㄴㅇ"], ["rating", 5], ["product_id", 6], ["created_at", "2024-10-11 11:09:18.525230"], ["updated_at", "2024-10-11 11:09:18.525230"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 4.6ms | Allocations: 64305)
+
+
+  
+NoMethodError (undefined method `article_path' for #<ReviewsController:0x0000562d3a586340>):
+  
+app/controllers/reviews_controller.rb:31:in `block (2 levels) in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/products/6/reviews" for 172.17.0.1 at 2024-10-11 11:09:34 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"VY7YW6lGRVLDGRAD7o9KiYnbvZg54DRdIEixfPJv9oQ0RZrOflPWVoPSUoK3cRZ/auPjW+Ns0cUposGQ46si0w==", "review"=>{"content"=>"ㅁㄴㅇ", "rating"=>"5", "product_id"=>"6"}, "commit"=>"Create Review", "product_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅁㄴㅇ"], ["rating", 5], ["product_id", 6], ["created_at", "2024-10-11 11:09:34.976323"], ["updated_at", "2024-10-11 11:09:34.976323"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 3.8ms | Allocations: 60409)
+
+
+  
+NoMethodError (undefined method `article_path' for #<ReviewsController:0x0000562d3a6ca2b0>):
+  
+app/controllers/reviews_controller.rb:31:in `block (2 levels) in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/products/6/reviews" for 172.17.0.1 at 2024-10-11 11:09:55 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"VY7YW6lGRVLDGRAD7o9KiYnbvZg54DRdIEixfPJv9oQ0RZrOflPWVoPSUoK3cRZ/auPjW+Ns0cUposGQ46si0w==", "review"=>{"content"=>"ㅁㄴㅇ", "rating"=>"5", "product_id"=>"6"}, "commit"=>"Create Review", "product_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "rating", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "ㅁㄴㅇ"], ["rating", 5], ["product_id", 6], ["created_at", "2024-10-11 11:09:55.634453"], ["updated_at", "2024-10-11 11:09:55.634453"]]
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:30:in `block in create'
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/products/6
+Completed 302 Found in 30ms (ActiveRecord: 10.3ms | Allocations: 21642)
+
+
+Started GET "/products/6" for 172.17.0.1 at 2024-10-11 11:09:55 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:69:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/views/products/show.html.erb:18
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/views/products/show.html.erb:20
+  Rendered reviews/_form.html.erb (Duration: 3.3ms | Allocations: 3640)
+  Rendered products/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.9ms | Allocations: 17218)
+
+
+Started GET "/products" for 172.17.0.1 at 2024-10-11 11:09:58 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 7020)
+
+

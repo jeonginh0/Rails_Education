@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # root 'tests#index'
   # root 'articles#index'
   # root 'products#index'
+  get '/class_statuses/:class_list_id/show_users', to: 'class_statuses#show_users', as: :class_status_show_user
   root 'class_lists#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

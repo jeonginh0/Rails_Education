@@ -64,6 +64,11 @@ class ClassStatusesController < ApplicationController
       end
     end
   end
+  
+  def show_users
+	@class_list = ClassList.find(params[:class_list_id])
+	@users = @class_list.users
+  end
 
   # DELETE /class_statuses/1
   # DELETE /class_statuses/1.json

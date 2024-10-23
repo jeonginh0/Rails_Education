@@ -2,6 +2,14 @@ class ClassStatus < ApplicationRecord
   belongs_to :user
   belongs_to :class_list
 	
+  def overlap?
+  ClassStatus.where(user_id: self.user_id, class_list_id: self.class_list_id).size
+  end
+
+  def full?
+  ClassStatus.where(class_list_id: self.class_list_id).size >= ClassList.find(self.class_list_id).c_account
+  end
+  
   # 수강 신청 여부 확인
   def self.applied?(user_id, class_list_id)
 	  exists?(user_id: user_id, class_list_id: class_list_id)

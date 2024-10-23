@@ -22,7 +22,7 @@ class ClassStatusesController < ApplicationController
   end
 
   # POST /class_statuses
-  # POST /class_statuses.json
+  # POST /class_statuses.json/
   def create
     @class_status = ClassStatus.new(class_status_params)
 	user_id = @class_status.user_id

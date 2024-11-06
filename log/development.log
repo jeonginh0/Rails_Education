@@ -20563,3 +20563,1042 @@ Processing by ClassStatusesController#show_users as HTML
 Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 8390)
 
 
+Started GET "/" for 113.198.244.81 at 2024-11-06 00:27:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClassListsController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 1260)
+
+
+Started GET "/" for 113.198.244.81 at 2024-11-06 00:27:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2024-11-06 00:27:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://firstrailsproject-qscvv.run.goorm.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 10.9ms | Allocations: 9180)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:27:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (1.4ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:47
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 28092)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /workspace/firstRailsProject/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 1437ms
+Built at: 2024-11-06 12:27:33 ├F10: AM┤
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 9802ms (Views: 9777.1ms | ActiveRecord: 13.7ms | Allocations: 92381)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:29:25 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 79.5ms | Allocations: 20781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 86.1ms | ActiveRecord: 3.6ms | Allocations: 28054)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:29:37 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 20806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 3.1ms | Allocations: 28087)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:30:50 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.3ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:22
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (6.9ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:53
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:54
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 20800)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 54.2ms | ActiveRecord: 9.9ms | Allocations: 28044)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:31:35 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 20760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 2.9ms | Allocations: 28035)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:34:06 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 20763)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 719ms (Views: 713.9ms | ActiveRecord: 3.2ms | Allocations: 44305)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:37:16 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 20821)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 3.0ms | Allocations: 28067)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:37:42 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:51
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:52
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 20862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 3.2ms | Allocations: 28112)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:39:28 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 20861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 3.0ms | Allocations: 28112)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:39:34 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.3ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.2ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (30.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 81.6ms | Allocations: 20857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 53.7ms | ActiveRecord: 33.7ms | Allocations: 28127)
+
+
+Started GET "/class_lists/new" for 172.17.0.1 at 2024-11-06 00:42:04 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/new.html.erb within layouts/application
+  Rendered class_lists/_form.html.erb (Duration: 10.8ms | Allocations: 3964)
+  Rendered class_lists/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4346)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 11473)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:46:39 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 20855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 3.1ms | Allocations: 28102)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:47:12 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 20860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 3.0ms | Allocations: 28104)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:47:20 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 20857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 2.9ms | Allocations: 28111)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:47:25 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 20855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 2.8ms | Allocations: 28107)
+
+
+Started GET "/" for 172.17.0.1 at 2024-11-06 00:47:43 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ClassListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering class_lists/index.html.erb within layouts/application
+  [1m[36mClassList Load (0.2ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists"[0m
+  ↳ app/views/class_lists/index.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 4]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 5]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 6]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 7]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 8]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 9]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 10]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_statuses" WHERE "class_statuses"."class_list_id" = $1[0m  [["class_list_id", 11]]
+  ↳ app/views/class_lists/index.html.erb:19
+  [1m[36mClassStatus Load (0.1ms)[0m  [1m[34mSELECT "class_statuses".* FROM "class_statuses" WHERE "class_statuses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/class_lists/index.html.erb:46
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  [1m[36mClassList Load (0.1ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:48
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:49
+  [1m[36mCACHE ClassList Load (0.0ms)[0m  [1m[34mSELECT "class_lists".* FROM "class_lists" WHERE "class_lists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/class_lists/index.html.erb:50
+  Rendered class_lists/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 20855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 3.1ms | Allocations: 28081)
+
+
